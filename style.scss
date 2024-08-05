@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+.solar_systm {
+  transform-style: preserve-3d;
+  pointer-events: none;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+* {
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+}
+
+body .solar_systm .planet,
+body input[type="radio"][name="planet"]::after,
+body .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translate(-50%);
+}
+
+body .solar_systm .planet.neptune .trajectory.ner,
+body .solar_systm .planet.neptune .trajectory.pro,
+body .solar_systm .planet.neptune .trajectory.tri,
+body .solar_systm .planet.uranus .trajectory.umb,
+body .solar_systm .planet.uranus .trajectory.ari,
+body .solar_systm .planet.uranus .trajectory.mir,
+body .solar_systm .planet.saturn .trajectory.enc,
+body .solar_systm .planet.saturn .trajectory.di,
+body .solar_systm .planet.saturn .trajectory.ti,
+body .solar_systm .planet.jupiter .trajectory.ga,
+body .solar_systm .planet.jupiter .trajectory.eu,
+body .solar_systm .planet.jupiter .trajectory.lop,
+body .solar_systm .planet.mars .trajectory.p,
+body .solar_systm .planet.mars .trajectory.d,
+body .solar_systm .planet.earth .trajectory.m {
+  border: 2px dashed white;
+  position: absolute;
+  border-radius: 3400px;
+  background: none !important;
+  z-index: -2;
+}
+
+body .solar_systm .planet {
+  height: 1200px;
+  width: 1200px;
+  border-radius: 600px;
+  background: red;
+  transition: transform 2.8s 0.23s cubic-bezier(0.33, 0, 0, 1), opacity 2s 0.8s,
+    box-shadow 0s 0s;
+  background-size: 1140px 910px !important;
+  top: auto;
+  bottom: -920px;
+}
+
+body .solar_systm .planet .moon {
+  height: 200px;
+  width: 200px;
+  border-radius: 600px;
+  background: red;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0;
+  transition: all 0.6s 0.2s;
+}
+
+body .solar_systm .planet .moon h2 {
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 0;
+  position: relative;
+  top: -120px;
+}
+
+body .solar_systm .planet .moon h3 {
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #fea082;
+  margin: 0;
+  position: relative;
+  top: -120px;
+}
+
+@keyframes planet {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1000px;
+  }
+}
+
+body .solar {
+  position: absolute;
+  transform: rotatex(-20deg);
+  perspective: 800px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+body input [type="radio"][name="planet"]::after {
+  width: 220px;
+  height: 220px;
+  border-radius: 550px;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 12;
+  left: 18px;
+  bottom: 282px;
+}
+
+body {
+  overflow: hidden;
+  background: black;
+  height: 100vh;
+  font-family: "Monserrat", sans-serif;
+}
+
+body .logo {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 40px;
+}
+
+body .logo span {
+  font-size: 12px;
+  color: #f39041;
+  display: block;
+}
+body label {
+  cursor: pointer;
+}
+body label.mercury > .preview {
+  background: url("https://www.solarsystemscope.com/images/textures/full/2k_makemake_fictional.jpg") !important;
+}
+body label.venus > .preview {
+  background: url("https://nasa3d.arc.nasa.gov/shared_assets/images/ven0aaa2/ven0aaa2-copy-428-321.jpg") !important;
+}
+body label.earth > .preview {
+  background: url("https://img00.deviantart.net/04ef/i/2009/114/3/e/new_earth_texture_map_by_lightondesigns.jpg") !important;
+}
+body label.mars > .preview {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_texture.jpg") !important;
+}
+body label.jupiter > .preview {
+  background: url("https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA07782_hires.jpg") !important;
+}
+body label.saturn > .preview {
+  background: url("https://www.solarsystemscope.com/images/textures/full/2k_saturn.jpg") !important;
+}
+body label.uranus > .preview {
+  background: url("https://img00.deviantart.net/957c/i/2017/165/4/9/uranus_texture_map_by_jcpag2010-db7yjwb.png") !important;
+}
+body label.neptune > .preview {
+  background: url("https://img00.deviantart.net/f068/i/2017/165/b/c/neptune_texture_map_by_jcpag2010-dbcjcv5.png") !important;
+}
+body label.pluto > .preview {
+  background: url("https://pre00.deviantart.net/4677/th/pre/f/2015/314/4/e/pluto_map__2015_nov_10__by_snowfall_the_cat-d918tlb.png") !important;
+}
