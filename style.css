@@ -241,10 +241,122 @@ body labe.menu .preview {
   border-radius: 100px;
   box-shadow: 0 -13px 10px 2px black inset;
 }
+body label.menu .info {
+  position: relative;
+  left: 50px;
+  top: 1px;
+}
 body label.menu h2,
 body label.menu h3 {
   text-transform: uppercase;
-  margin:0;
+  margin: 0;
   font-weight: 100;
   letter-spacing: 2px;
+}
+body label.menu h2 .pip {
+  width: 0;
+  height: 9px;
+  background: #fea082;
+  float: left;
+  position: relative;
+  top: 3px;
+  transition: all 0.3s;
+  margin-right: 0px;
+}
+body label.menu h3 {
+  font-size: 8px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  opacity: 0.3;
+}
+body label.menu:nth-of-type(1) {
+  top: calc(50vh + 100px + ((14px + 34px) * 1) + 0px - 369px);
+}
+body label.menu:nth-of-type(2) {
+  top: calc(50vh + 100px + ((14px + 34px) * 2) + 0px - 369px);
+}
+body label.menu:nth-of-type(3) {
+  top: calc(50vh + 100px + ((14px + 34px) * 3) + 0px - 369px);
+}
+body label.menu:nth-of-type(4) {
+  top: calc(50vh + 100px + ((14px + 34px) * 4) + 0px - 369px);
+}
+body label.menu:nth-of-type(5) {
+  top: calc(50vh + 100px + ((14px + 34px) * 5) + 0px - 369px);
+}
+body label.menu:nth-of-type(6) {
+  top: calc(50vh + 100px + ((14px + 34px) * 6) + 0px - 369px);
+}
+body label.menu:nth-of-type(7) {
+  top: calc(50vh + 100px + ((14px + 34px) * 7) + 0px - 369px);
+}
+body label.menu:nth-of-type(8) {
+  top: calc(50vh + 100px + ((14px + 34px) * 8) + 0px - 369px);
+}
+body label.menu:nth-of-type(9) {
+  top: calc(50vh + 100px + ((14px + 34px) * 9) + 0px - 369px);
+}
+body input.read {
+  display: none;
+}
+body .read:checked + label + input + .panel {
+  right: 0;
+}
+body .read:checked + label {
+  width: calc(100% -420px);
+}
+body .read:checked + label::after {
+  opacity: 1;
+  left: 0;
+}
+body .read:checked + label + label {
+  opacity: 1;
+  transition: all 0.3s 0.6s;
+}
+body .read:not(:checked) + label + label {
+  opacity: 0;
+  transition: all 0.3s 0s;
+}
+body labe.closeBig {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  height: 100vh;
+  transition: all 0.2s;
+  z-index: 10;
+  width: 0;
+  background: rgba(56, 37, 99, 0.38);
+}
+body label.closeBig::after {
+  content: 'Back';
+  text-align: center;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  left: -140px;
+  opacity: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .overlay {
+  border-bottom: 1020px solid black;
+  width: 1800px;
+  height: 620px;
+  top: auto;
+  -webkit-transform: none;
+  transform: none;
+  top: -240px;
+  left: -303px;
+  opacity: 1;
+  border-radius: 100%;
+  z-index: 0;
+  box-shadow: 0px -190px 215px 110px black inset;
+}
+body input[type='radio'][name='planet'] {
+  appearance: none;
+}
+body input[type='radio'][name='planet']::after {
+  content: '';
 }
